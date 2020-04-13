@@ -1,0 +1,72 @@
+﻿<Window x:Class="ADO.NET_hw_lesson4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADO.NET_hw_lesson4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="ViewTable">
+
+                <StackPanel Margin="5">
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <Label Content="DataPrivider:"/>
+
+                        <StackPanel Orientation="Horizontal" Margin="10">
+
+                            <RadioButton x:Name="rbtnSqlServer"
+                                         Content="SqlServer" 
+                                         GroupName="DbProvider" 
+                                         IsChecked="True" 
+                                         Margin="30 0"
+                                         Click="RbtnSqlServer_Click"/>
+
+                            <RadioButton x:Name="rbtnAccessDb"
+                                         Content="AccessDb" 
+                                         GroupName="DbProvider" 
+                                         Margin="30 0"
+                                         Click="RbtnAccessDb_Click"/>
+
+                        </StackPanel>
+                    </StackPanel>
+
+
+                    <DataGrid x:Name="dgViewTable"
+                              HorizontalScrollBarVisibility="Visible"
+                              VerticalScrollBarVisibility="Visible"/>
+
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="ViewTable1">
+                <StackPanel Margin="5">
+
+                    <StackPanel Orientation="Horizontal" Margin="0 10">
+
+                        <Button Content="DataLoad" Padding="10 5"
+                                x:Name="btnDataLoad"
+                                Click="BtnDataLoad_Click"/>
+
+                        <Label x:Name="lbStatus" Margin="30 0"/>
+
+                    </StackPanel>
+
+                    <DataGrid x:Name="dgViewTable1"
+                              HorizontalScrollBarVisibility="Visible"
+                              VerticalScrollBarVisibility="Visible"/>
+
+                </StackPanel>
+
+            </TabItem>
+
+        </TabControl>
+
+    </Grid>
+
+</Window>
