@@ -11,7 +11,7 @@
         <TabControl>
             <TabItem Header="ViewTable">
 
-                <StackPanel Margin="5"> 
+                <StackPanel Margin="5">
 
                     <StackPanel Orientation="Horizontal">
 
@@ -37,7 +37,8 @@
 
                     <DataGrid x:Name="dgViewTable"
                               HorizontalScrollBarVisibility="Visible"
-                              VerticalScrollBarVisibility="Visible"/>
+                              VerticalScrollBarVisibility="Visible"
+                              Height="300" Margin="10,0"/>
 
                 </StackPanel>
             </TabItem>
@@ -58,7 +59,8 @@
 
                     <DataGrid x:Name="dgViewTable1"
                               HorizontalScrollBarVisibility="Visible"
-                              VerticalScrollBarVisibility="Visible"/>
+                              VerticalScrollBarVisibility="Visible" 
+                              Height="300" Margin="10,0"/>
 
                 </StackPanel>
 

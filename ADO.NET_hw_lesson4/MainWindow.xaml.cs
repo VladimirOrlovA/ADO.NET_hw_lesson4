@@ -105,12 +105,11 @@ namespace ADO.NET_hw_lesson4
 
                 connection.Close();
                 object state2 = connection.State;
+                stopwatch.Stop();
+                
+                lbStatus.Content = $"State  {state1}-{state2} Runtime: {stopwatch.ElapsedMilliseconds}";
 
                 dgViewTable1.ItemsSource = dataTable.DefaultView;
-
-                stopwatch.Stop();
-
-                lbStatus.Content = $"State  {state1}-{state2} Runtime: {stopwatch.ElapsedMilliseconds}";
             }
             catch (Exception exc)
             {
