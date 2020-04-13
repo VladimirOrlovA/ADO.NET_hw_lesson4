@@ -22,7 +22,6 @@
                             <RadioButton x:Name="rbtnSqlServer"
                                          Content="SqlServer" 
                                          GroupName="DbProvider" 
-                                         IsChecked="True" 
                                          Margin="30 0"
                                          Click="RbtnSqlServer_Click"/>
 

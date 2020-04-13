@@ -33,11 +33,6 @@ namespace ADO.NET_hw_lesson4
         public MainWindow()
         {
             InitializeComponent();
-
-            //DbDataProvider = ConfigurationManager.AppSettings["SqlClient"];
-            //connStr = ConfigurationManager.ConnectionStrings["SqlClient"].ConnectionString;
-
-            //FillViewTable();
         }
 
         void FillViewTable()
