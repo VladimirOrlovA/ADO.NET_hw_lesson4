@@ -97,17 +97,20 @@ namespace ADO.NET_hw_lesson4
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 await connection.OpenAsync();
-                object state = connection.OpenAsync().AsyncState;
+                object state1 = connection.State;
 
                 DbDataReader dataReader = await cmd.ExecuteReaderAsync();
                 DataTable dataTable = new DataTable();
                 dataTable.Load(dataReader);
 
+                connection.Close();
+                object state2 = connection.State;
+
                 dgViewTable1.ItemsSource = dataTable.DefaultView;
 
                 stopwatch.Stop();
 
-                lbStatus.Content = $"State {state} Runtime: {stopwatch.ElapsedMilliseconds} ";
+                lbStatus.Content = $"State  {state1}-{state2} Runtime: {stopwatch.ElapsedMilliseconds}";
             }
             catch (Exception exc)
             {
